@@ -1,0 +1,11 @@
+*.sw[po]
+*.pickle
+
+__pycache__/
+audios/
+mfcc_features/
+normalized_lms/
+normalized_mfcc_features/
+plots/
+talk/
+
