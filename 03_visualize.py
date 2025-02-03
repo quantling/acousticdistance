@@ -118,3 +118,35 @@ for response_var in response_variables:
     plt.savefig(f"plots/boxplot_{response_var}.pdf")
     plt.clf()
 
+
+
+
+# for the paper
+data.loc[data['condition'] == "Slovak (l3)", 'condition'] = "Slovak (L3)"
+response_variables = (
+        'dtw_dist_wave2vec2',
+        'avg_dist_wave2vec2',
+        'dtw_dist_mfcc_edd',
+        'avg_dist_mfcc_edd',
+                     )
+
+for response_var in response_variables:
+    plt.figure(figsize=(4, 3))
+    sns.boxplot(x="condition", y=response_var,
+                hue="group", palette=["m", "g"],
+                data=data)
+    sns.despine(offset=10, trim=True)
+    if response_var == 'dtw_dist_wave2vec2':
+        ylabel = "DTW dist Wav2Vec2"
+    elif response_var == 'avg_dist_wave2vec2':
+        ylabel = "AVG dist Wav2Vec2"
+    elif response_var == 'dtw_dist_mfcc_edd':
+        ylabel = "DTW dist MFCC"
+    elif response_var == 'avg_dist_mfcc_edd':
+        ylabel = "AVG dist MFCC"
+    plt.ylabel(ylabel)
+    plt.title(ylabel)
+    plt.tight_layout()
+    plt.savefig(f"plots/boxplot_{response_var}.pdf")
+    plt.clf()
+
