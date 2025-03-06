@@ -2,6 +2,16 @@
 Acousticdistance
 ================
 
+Installation
+============
+
+::
+
+    pip install acousticdistance
+
+
+Notes
+=====
 At the moment this is supplementary material for the presentation of "Phonetic
 distances in L3-speech" of the ESSV2025 (https://www.essv.de/essv2025/).
 

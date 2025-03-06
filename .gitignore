@@ -8,4 +8,5 @@ normalized_lms/
 normalized_mfcc_features/
 plots/
 talk/
+dist/
 
